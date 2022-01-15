@@ -322,7 +322,8 @@ export default {
 
                 let names_2 = [],
                     names_3 = [],
-                    names_5 = [];
+                    names_5 = [],
+                    other = [];
 
                 tmp.forEach(item => {
                     if (item !== "date" && item !== "average" && item !== "total") {
@@ -335,11 +336,14 @@ export default {
                         if (this.records[i][item].device_type_id === 5)
                             names_5.push(item);
                     }
+                    else
+                        other.push(item)
                 });
 
-                data[i] = [...names_2, ...names_5, ...names_3];
+                data[i] = [...names_2, ...names_5, ...names_3, ...other];
             }
 
+            console.log("data=>", data);
             return data;
         },
         recNames() {
