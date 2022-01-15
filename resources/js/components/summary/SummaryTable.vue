@@ -198,7 +198,7 @@
                             <tr
                                 class="row100 body"
                                 :key="'record' + index"
-                                v-for="(record, index) in recData"
+                                v-for="(record, index) in records"
                             >
                                 <td class="column1 " v-if="not_efficiency_mode">
                                     <span v-if="has_passages">{{
@@ -235,7 +235,7 @@
             </div>
             <div
                 class="row w-100 mx-auto my-3 align-items-center justify-content-center"
-                v-if="!recData() || recData().length == 0"
+                v-if="!records || records.length == 0"
             >
                 <div class="col-12">
                     <div
