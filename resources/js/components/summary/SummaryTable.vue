@@ -328,16 +328,16 @@ export default {
                 tmp.forEach(item => {
                     if (item !== "date" && item !== "average" && item !== "total") {
                         if (this.records[i][item].device_type_id === 2)
-                            names_2.push(item);
+                            names_2.push(this.records[i][item]);
 
                         if (this.records[i][item].device_type_id === 3)
-                            names_3.push(item);
+                            names_3.push(this.records[i][item]);
 
                         if (this.records[i][item].device_type_id === 5)
-                            names_5.push(item);
+                            names_5.push(this.records[i][item]);
                     }
                     else
-                        other.push(item)
+                        other.push(this.records[i][item])
                 });
                 console.log("data step[",i,"]=>", [...names_2, ...names_5, ...names_3, ...other]);
                 this.records[i] =  [...names_2, ...names_5, ...names_3, ...other];
@@ -345,7 +345,7 @@ export default {
             }
 
 
-            return data;
+            return this.records;
         },
         recNames() {
             let tmp = Object.keys(this.records[0]).sort(function(a, b) {
