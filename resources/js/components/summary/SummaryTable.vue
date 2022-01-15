@@ -361,8 +361,7 @@ export default {
                     }
                 });
 
-                console.log("result=>",[...names_2, ...names_5, ...names_3, ...other])
-                data.push([...names_2, ...names_5, ...names_3, ...other]);
+                data.push({...names_2, ...names_5, ...names_3, ...other});
 
             }
 
