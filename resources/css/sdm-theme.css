@@ -1,0 +1,482 @@
+/* -----------------------------
+:: START SDM NOTIFICATIONS
+----------------------------- */
+.sdm-notification {
+    padding: 10px;
+    margin: 0 5px 5px;
+    font-size: 15px;
+    color: #fff;
+    background: #7224f2;
+    border-left: 5px solid #7224f2;
+    border-radius: 10px;
+}
+.sdm-notification.warn {
+    background: #ffb648;
+    border-left-color: #f48a06;
+}
+.sdm-notification.error {
+    background: #d93030;
+    border-left-color: #d93030;
+}
+.sdm-notification.success {
+    background: #458e3c;
+    border-left-color: #458e3c;
+}
+.sdm-notification.primary {
+    background: #7224f2;
+    border-left-color: #7224f2;
+}
+/* -----------------------------
+:: END SDM NOTIFICATIONS
+----------------------------- */
+
+/* -----------------------------
+:: START SDM CHECKBOXES
+----------------------------- */
+/*now*/
+.checkbox-custom:focus + .checkbox-custom-label {
+    outline: none;
+}
+.checkbox-custom:checked:disabled + .checkbox-custom-label::before {
+    background: #dfe1ee !important;
+    border: 1px solid #dfe1ee !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-primary-checkbox:checked + .checkbox-custom-label:before {
+    background: #6917f1 !important;
+    border: 1px solid #6917f1 !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-red-checkbox:checked + .checkbox-custom-label:before {
+    background: #d62627 !important;
+    border: 1px solid #d62627 !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-green-checkbox:checked + .checkbox-custom-label:before {
+    background: #458d3c !important;
+    border: 1px solid #458d3c !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-secondary-checkbox:checked + .checkbox-custom-label:before {
+    background: #dfe1ee !important;
+    border: 1px solid #dfe1ee !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+/*how it should be*/
+/*todo: change classes names in project to these */
+
+.sdm-checkbox {
+    opacity: 0;
+    position: absolute;
+}
+
+.sdm-checkbox,
+.sdm-checkbox-label {
+    display: inline-block;
+    vertical-align: middle;
+    margin: 5px;
+    cursor: pointer;
+    font-weight: 500;
+    font-size: 10px;
+}
+
+.sdm-checkbox-label {
+    position: relative;
+    margin-left: 0;
+}
+.sdm-checkbox + .sdm-checkbox-label:before {
+    content: "";
+    border: 1px solid #ddd;
+    display: inline-block;
+    vertical-align: middle;
+    width: 17px;
+    height: 17px;
+    padding: 2px;
+    margin-right: 10px;
+    text-align: center;
+    border-radius: 3px;
+}
+.sdm-checkbox + .sdm-checkbox-label::before {
+    border: 1px solid #dfe1ee !important;
+}
+.sdm-checkbox:focus + .sdm-checkbox-label {
+    outline: none !important;
+}
+.sdm-checkbox + .sdm-checkbox-label::before {
+    border: 1px solid #dfe1ee !important;
+}
+.sdm-checkbox:checked:disabled + .sdm-checkbox-label::before {
+    background: #dfe1ee !important;
+    border: 1px solid #dfe1ee !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-primary-checkbox:checked + .sdm-checkbox-label:before {
+    background: #6917f1 !important;
+    border: 1px solid #6917f1 !important;
+    box-shadow: inset 0px 0px 0px 4px #fff!important;
+}
+.sdm-red-checkbox:checked + .sdm-checkbox-label:before {
+    background: #d62627 !important;
+    border: 1px solid #d62627 !important;
+    box-shadow: inset 0px 0px 0px 4px #fff!important;
+}
+.sdm-green-checkbox:checked + .sdm-checkbox-label:before {
+    background: #458d3c !important;
+    border: 1px solid #458d3c !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+.sdm-secondary-checkbox:checked + .sdm-checkbox-label:before {
+    background: #dfe1ee !important;
+    border: 1px solid #dfe1ee !important;
+    box-shadow: inset 0px 0px 0px 4px #fff;
+}
+/* -----------------------------
+:: END SDM CHECKBOXES
+----------------------------- */
+
+/* -----------------------------
+:: START SDM BUTTONS
+----------------------------- */
+.sdm-primary-button {
+    background: #7224f2 !important;
+    background-color: #7224f2 !important;
+    border: none !important;
+    color: white !important;
+    font-size: 11px !important;
+    font-weight: 500 !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-primary-border-button {
+    background: transparent;
+    border: 1px solid #7224f2;
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-secondary-border-button {
+    background: transparent;
+    border: 1px solid #dfe1ee;
+    color: black;
+    font-size: 11px;
+    font-weight: 500;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-red-button {
+    background: #d62627 !important;
+    border: none !important;
+    color: white !important;
+    font-size: 11px;
+    font-weight: 500;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-green-button {
+    background: #458d3c;
+    border: none;
+    color: white;
+    font-size: 11px;
+    font-weight: 500;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-reset-button {
+    background:#dfe0f0 !important;
+    color:#7224f2 !important;
+    font-size: 12px;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-primary-underline-button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-primary-underline-button span {
+    font-size: 10px;
+    border-bottom: 2px solid #7224f2;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-red-underline-button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-red-underline-button span {
+    font-size: 10px;
+    border-bottom: 2px solid #d62627;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-green-underline-button{
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-green-underline-button span {
+    font-size: 10px;
+    border-bottom: 2px solid #458d3c;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-icon-button {
+    height:36px;
+    width: 36px;
+    min-width: 36px;
+    border: 1px solid #dfe1ee !important;
+    font-size: 15px !important;
+    background: transparent !important;
+    color: black !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-primary-icon-button {
+    height:36px;
+    width: 36px;
+    min-width: 36px;
+    border: none !important;
+    font-size: 15px;
+    background: #7224f2 !important;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-secondary-icon-button {
+    height:36px;
+    width: 36px;
+    min-width: 36px;
+    border: 1px solid #dfe1ee !important;
+    font-size: 15px;
+    background: #dfe1ee !important;
+    color: white;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-green-icon-button {
+    height:36px;
+    width: 36px;
+    min-width: 36px;
+    border: 1px solid #458d3c !important;
+    font-size: 15px;
+    background: #458d3c !important;
+    color: white !important;
+    outline: none !important;
+    box-shadow: none !important;
+}
+.sdm-icon-button.primary-border {
+    border-bottom: 1px solid #7224f2;
+}
+.sdm-icon-button svg {
+    width: 14px !important;
+    min-width: 14px !important;
+    height:14px !important;
+    min-height: 14px !important;
+}
+.sdm-icon-button svg path {
+    fill:black;
+}
+.sdm-icon-button.active svg path {
+    fill:#7224f2;
+}
+.sdm-icon-button.active svg rect {
+    fill:#7224f2;
+}
+.sdm-icon-button.active svg polygon {
+    fill:#7224f2;
+}
+.sdm-icon-button.nonactive svg path {
+    fill:#dfe1ee;
+}
+.sdm-icon-button.nonactive svg rect {
+    fill:#dfe1ee;
+}
+.sdm-icon-button.nonactive svg polygon {
+    fill:#dfe1ee;
+}
+.sdm-icon-button:disabled svg path {
+    fill:#dfe1ee;
+}
+.sdm-icon-button:disabled svg rect {
+    fill:#dfe1ee;
+}
+.sdm-icon-button:disabled svg polygon {
+    fill:#dfe1ee;
+}
+/* -----------------------------
+:: END SDM BUTTONS
+----------------------------- */
+
+/* -----------------------------
+:: START SDM POPOVER AND TOOLTIP
+----------------------------- */
+.sdm-popover {
+    font-size: 12px !important;
+    padding-top: 15px !important;
+    padding-left: 15px !important;
+    padding-bottom: 15px !important;
+    padding-right: 0 !important;
+}
+.sdm-popover .ps {
+    width: 100%;
+    height: 100%;
+    padding-left: 0 !important;
+    background: #fff !important;
+}
+.sdm-popover .ps .ps__rail-y {
+    background: #fff !important;
+    opacity: 1 !important;
+    width: 3px !important;
+}
+.sdm-popover .ps .ps__thumb-y {
+    background-color: #7224f2 !important;
+    width: 3px !important;
+    right: 0;
+}
+.sdm-popover .ps .ps__thumb-y:hover {
+    background-color: #7224f2 !important;
+    width: 3px !important;
+    right: 0;
+}
+.sdm-popover .ps .ps__rail-y:hover > .ps__thumb-y,
+.sdm-popover .ps__rail-y:focus > .ps__thumb-y,
+.sdm-popover .ps__rail-y.ps--clicking .ps__thumb-y {
+    background-color: #7224f2 !important;
+    width: 3px !important;
+    right: 0;
+}
+.sdm-primary-tooltip .tooltip-inner{
+    background: #7224f2 !important;
+    opacity: 1 !important;
+}
+.sdm-primary-tooltip.tooltip{
+    opacity: 1 !important;
+}
+
+/* -----------------------------
+:: END SDM POPOVER
+----------------------------- */
+
+/* -----------------------------
+:: START SDM TYPOGRAPHIC
+----------------------------- */
+.sdm-primary-text {
+    font-family: Montserrat;
+    -webkit-font-smoothing: antialiased;
+    font-size: 12px;
+    font-weight: 500;
+}
+.sdm-secondary-text {
+    font-family: Montserrat;
+    -webkit-font-smoothing: antialiased;
+    font-size: 9px;
+    color: #959597;
+    font-weight: 400;
+}
+.sdm-primary-label {
+    color: #7224f2;
+    -webkit-font-smoothing: antialiased;
+}
+/* -----------------------------
+:: END SDM TYPOGRAPHIC
+----------------------------- */
+
+/* -----------------------------
+:: START SDM SVG
+----------------------------- */
+.sdm-primary-svg svg path {
+    fill: #7c34f2;
+}
+.sdm-primary-svg svg rect {
+    fill: #7c34f2;
+}
+.sdm-primary-svg svg polygon {
+    fill: #7c34f2;
+}
+.sdm-secondary-svg svg path {
+    fill: #dfe0f0;
+}
+.sdm-secondary-svg svg rect {
+    fill: #dfe0f0;
+}
+.sdm-red-svg svg path {
+    fill: #d62627;
+}
+.sdm-red-svg svg rect {
+    fill: #d62627;
+}
+.sdm-green-svg svg path {
+    fill: #458d3c;
+}
+.sdm-green-svg svg rect {
+    fill: #458d3c;
+}
+/* -----------------------------
+:: END
+----------------------------- */
+/* -----------------------------
+:: START
+----------------------------- */
+.sdm-select {
+    display: block;
+    width: 100%;
+    padding: 0.375rem 1.75rem 0.375rem 0.75rem;
+    font-size: 12px;
+    font-family: Montserrat;
+    font-weight: 400;
+    line-height: 1.5;
+    color: black;
+    vertical-align: middle;
+    background-color: transparent;
+    background-image: url("/chevron-down.svg");
+    background-repeat: no-repeat;
+    background-position: right 0.75rem center;
+    background-size: 16px 12px;
+    border: 1px solid #dfe1ee;
+    border-radius: 0.25rem;
+    -webkit-appearance: none;
+    -moz-appearance: none;
+    appearance: none;
+}
+.sdm-filter {
+    color: #9d9ea5;
+    font-size: 12px;
+}
+.sdm-filter-icon {
+    color: #7c34f2;
+    margin-left: 5px;
+}
+.sort-icon-rotation {
+    transform: rotate(180deg);
+}
+/* -----------------------------
+:: END
+----------------------------- */
+/* -----------------------------
+:: START
+----------------------------- */
+
+/* -----------------------------
+:: END
+----------------------------- */
+/* -----------------------------
+:: START
+----------------------------- */
+
+/* -----------------------------
+:: END
+----------------------------- */
+/* -----------------------------
+:: START
+----------------------------- */
+
+/* -----------------------------
+:: END
+----------------------------- */
+/* -----------------------------
+:: START
+----------------------------- */
+
+/* -----------------------------
+:: END
+----------------------------- */

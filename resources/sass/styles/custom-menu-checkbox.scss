@@ -1,0 +1,32 @@
+.custom-menu-checkbox {
+    .checkbox-custom + .checkbox-custom-label:before {
+        content: "";
+        border: 1px solid #ddd;
+        display: inline-block;
+        vertical-align: middle;
+        width: 17px;
+        height: 17px;
+        padding: 2px;
+        margin-right: 10px;
+        text-align: center;
+        border-radius: 3px;
+    }
+
+    .checkbox-custom:checked + .checkbox-custom-label:before {
+        border: 1px solid #6917f1;
+    }
+
+    .checkbox-custom:checked + .checkbox-custom-label:before {
+        background-image: url("/icons/iconmonstr-check-mark-1.svg");
+        background-position: right 0.70rem center;
+        box-shadow: inset 0px 0px 0px 4px #fff;
+    }
+
+    .checkbox-custom:focus + .checkbox-custom-label {
+        outline: none;
+    }
+}
+
+.checked-border {
+    border: 1px solid #6917f1;
+}

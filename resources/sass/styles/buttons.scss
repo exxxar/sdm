@@ -1,0 +1,19 @@
+.delete-button {
+    border: 1px solid red;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 35px;
+    width: 35px;
+    min-width: 35px;
+    background: transparent;
+}
+
+.sdm-primary-button:hover {
+    background: #914dff !important;
+    background-color: #9554ff !important;
+    transition: .3s;
+}
+ a[href~="mailto"] {
+     color: #7224f2;
+ }

@@ -1,0 +1,31 @@
+.main-link {
+    font-size: 14px;
+    word-break: break-word;
+    min-width: 70px;
+    color: black;
+}
+
+.main-link:hover {
+    color: #7c34f2 !important;
+    text-decoration: none;
+}
+
+.additional-link {
+    color: black;
+    font-size: 12px;
+    font-weight: 500;
+    display: flex;
+    align-items: center;
+    i {
+        padding: 3px 3px 3px 4px;
+        border: 1px solid #7c34f2;
+        border-radius: 50px;
+        width: 17px;
+        height: 17px;
+    }
+}
+
+.additional-link:hover {
+    color: #7c34f2 !important;
+    text-decoration: none;
+}

@@ -1,0 +1,26 @@
+created:
+    - app/Http/Controllers/LocationController.php
+    - database/factories/LocationFactory.php
+    - database/migrations/2021_04_28_165412_create_locations_table.php
+    - app/Location.php
+    - database/seeders/LocationSeeder.php
+    - tests/Feature/Http/Controllers/LocationControllerTest.php
+    - app/Http/Requests/LocationStoreRequest.php
+    - app/Http/Requests/LocationUpdateRequest.php
+    - app/Http/Resources/LocationCollection.php
+    - app/Http/Resources/LocationResource.php
+updated:
+    - routes/api.php
+models:
+    DeviceType: { title: 'string:255' }
+    Region: { title: 'string:255' }
+    Boundary: { title: 'string:255', region_id: 'nullable id foreign:regions.id', is_active: boolean, deleted_at: 'nullable timestamp', mobile: boolean, lat: 'nullable string:255', lon: 'nullable string:255', moving: boolean, coords: 'nullable string:255', speed_mode: 'nullable string:255' }
+    Device: { serial: 'string:255', is_active: boolean, device_type_id: 'nullable id foreign:device_types.id', deleted_at: 'nullable timestamp', properties: 'default:''{}'' json', region_id: 'nullable id foreign:regions.id', last_poll_at: 'nullable timestamp', device_boundary_id: 'nullable id foreign:boundaries.id', mobile: 'default:false boolean' }
+    TaskStatus: { title: 'string:255' }
+    Task: { status: 'default:''В работе'' string:255', user_id: 'id foreign:users.id', device_boundary_id: 'id foreign:boundaries.id', device_id: 'nullable id foreign:devices.id', date_executed: 'nullable timestamp', note: 'nullable string:255', deleted_at: 'nullable timestamp', task_status_id: 'nullable id foreign:task_statuses.id' }
+    DeviceGroup: { title: 'string:255' }
+    BoundaryGroup: { title: 'string:255', description: text }
+    Dictionary: { title: 'string:255', description: 'nullable text', dictionary_type_id: integer }
+    History: { user_id: 'id foreign:users.id', type: integer, object_id: id, action: 'string:255' }
+    DeviceParametersHistory: { device_id: 'id foreign:devices.id', violations: 'nullable integer', passages: 'nullable integer', status: 'nullable string:255', ping: 'nullable integer', voltage: 'nullable double' }
+    Location: { title: 'string:400', description: longtext }

@@ -1,0 +1,110 @@
+#models:
+#  DeviceParametersHistory:
+#    device_id: id foreign:devices.id
+#    violations: nullable integer
+#    passages: nullable integer
+#    status: nullable string:255
+#    ping: nullable integer
+#    voltage: nullable double
+#controllers:
+#  DeviceParametersHistory:
+#    resource: api
+#models:
+#  DeviceType:
+#    title: string:255
+#  DeviceGroup:
+#    title: string:255
+#  BoundaryGroup:
+#    title: string:255
+#    description: text
+#  Region:
+#    title: string:255
+#  Boundary:
+#    title: string:255
+#    region_id: nullable id foreign:regions.id
+#    is_active: boolean
+#    deleted_at: nullable timestamp
+#    mobile: boolean
+#    lat: nullable string:255
+#    lon: nullable string:255
+#    moving: boolean
+#    coords: nullable string:255
+#    speed_mode: nullable string:255
+#  Device:
+#    serial: string:255
+#    is_active: boolean
+#    device_type_id: nullable id foreign:device_types.id
+#    deleted_at: nullable timestamp
+#    properties: default:'{}' json
+#    region_id: nullable id foreign:regions.id
+#    last_poll_at: nullable timestamp
+#    device_boundary_id: nullable id foreign:boundaries.id
+#    mobile: default:false boolean
+#  Device:
+#    serial: string:255
+#    device_type_id: id foreign:device_types.id
+#    region_id: id foreign:regions.id
+#    device_boundary_id:
+#    movable: boolean
+#    is_active: boolean
+#    is_coord: boolean
+#    properties: default:'1' json
+#    last_poll_at: timestamp
+#    deleted_at: nullable timestamp
+#controllers:
+#  BoundaryGroup:
+#    resource: api
+#  DeviceGroup:
+#    resource: api
+#  DeviceType:
+#    resource: api
+#  Region:
+#    resource: api
+#  Boundary:
+#    resource: api
+#seeders: DeviceType, Region, Boundary
+#seeders: BoundaryGroup
+
+#  id bigint NOT NULL,
+#  status character varying(255) DEFAULT 'В работе'::character varying NOT NULL,
+#  user_id bigint NOT NULL,
+#  device_boundary_id bigint NOT NULL,
+#  device_id bigint,
+#  date_executed timestamp(0) without time zone,
+#  note character varying(255),
+#  created_at timestamp(0) without time zone,
+#  updated_at timestamp(0) without time zone,
+#  deleted_at timestamp(0) without time zone,
+#  task_status_id bigint
+
+#models:
+#  TaskStatus:
+#    title: string:255
+#  Task:
+#    status: default:'В работе' string:255
+#    user_id: id foreign:users.id
+#    device_boundary_id: id foreign:boundaries.id
+#    device_id: nullable id foreign:devices.id
+#    date_executed: nullable timestamp
+#    note: nullable string:255
+#    deleted_at: nullable timestamp
+#    task_status_id: nullable id foreign:task_statuses.id
+#controllers:
+#  TaskStatus:
+#    resource: api
+#  Task:
+#    resource: api
+#seeders: TaskStatus, Task
+
+models:
+  Location:
+    title: string:400
+    description: longtext
+
+controllers:
+  Location:
+    resource: api
+
+
+seeders: Location
+

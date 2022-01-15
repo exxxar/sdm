@@ -1,0 +1,18 @@
+@extends('layouts.app')
+
+@section('content')
+    <div class="row w-100 m-auto justify-content-center">
+        <main style="width: 100%">
+            <div class="row w-100 m-auto justify-content-center">
+                <div class="col-12">
+                    <transition name="fade">
+                        <report-templates-show-page
+                            :user="{{ Auth::user() }}"
+                            :report_template="{{$report_template}}"
+                        ></report-templates-show-page>
+                    </transition>
+                </div>
+            </div>
+        </main>
+    </div>
+@endsection
