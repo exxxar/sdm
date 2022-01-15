@@ -307,10 +307,10 @@ export default {
     },
     methods: {
         recData() {
-            if (!this.this.records)
+            if (!this.records)
                 return [];
-            
-            let data = this.records
+
+            let data = [];
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
                     if (a > b) {
