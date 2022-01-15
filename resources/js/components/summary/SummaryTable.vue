@@ -307,7 +307,7 @@ export default {
     },
     methods: {
         recData() {
-            let data = [];
+            let data = this.records
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
                     if (a > b) {
@@ -337,7 +337,7 @@ export default {
                     }
                 });
 
-                data.push([...names_2, ...names_5, ...names_3]);
+                data[i] = [...names_2, ...names_5, ...names_3];
             }
 
             return data;
