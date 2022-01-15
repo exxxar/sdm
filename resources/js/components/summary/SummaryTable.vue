@@ -331,20 +331,20 @@ export default {
                 tmp.forEach(item => {
                     if (item !== "date" && item !== "average" && item !== "total") {
                         if (this.records[i][item].device_type_id === 2)
-                            names_2[item] = this.records[i][item];
+                            Object.assign(names_2, {item: this.records[i][item]});
 
                         if (this.records[i][item].device_type_id === 3)
-                            names_3[item] = this.records[i][item];
+                            Object.assign(names_3, {item: this.records[i][item]});
 
                         if (this.records[i][item].device_type_id === 5)
-                            names_5[item] = this.records[i][item];
+                            Object.assign(names_5, {item: this.records[i][item]});
                     }
                     else
-                        other[item] = this.records[i][item];
+                        Object.assign(other, {item: this.records[i][item]});
                 });
                 console.log("data step[",i,"]=>", [...names_2, ...names_5, ...names_3, ...other]);
-                data[i] =  [...names_2, ...names_5, ...names_3, ...other];
-                console.log("data=>", this.records[i]);
+                data[i].push( {...names_2, ...names_5, ...names_3, ...other});
+                console.log("data=>", data[i]);
             }
 
 
