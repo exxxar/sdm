@@ -323,10 +323,10 @@ export default {
                     return 0;
                 });
 
-                let names_2 = [],
-                    names_3 = [],
-                    names_5 = [],
-                    other = [];
+                let names_2 = {},
+                    names_3 = {},
+                    names_5 = {},
+                    other = {};
 
                 tmp.forEach(item => {
                     if (item !== "date" && item !== "average" && item !== "total") {
@@ -342,7 +342,7 @@ export default {
                     else
                         Object.assign(other, {item: this.records[i][item]});
                 });
-                console.log("data step[",i,"]=>", [...names_2, ...names_5, ...names_3, ...other]);
+                console.log("data step[",i,"]=>", {...names_2, ...names_5, ...names_3, ...other});
                 data[i].push( {...names_2, ...names_5, ...names_3, ...other});
                 console.log("data=>", data[i]);
             }
