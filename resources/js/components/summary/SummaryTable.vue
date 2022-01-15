@@ -335,29 +335,24 @@ export default {
                         if (this.records[i][item].device_type_id === 2) {
 
                             names_2[item] =  this.records[i][item]
-                            console.log("names_2=>",names_2)
                         }
 
 
                         if (this.records[i][item].device_type_id === 3)
                         {
-
                             names_3[item] =  this.records[i][item]
-                            console.log("names_3=>",names_2)
                         }
 
                         if (this.records[i][item].device_type_id === 5)
                         {
 
                             names_5[item] =  this.records[i][item]
-                            console.log("names_5=>",names_2)
                         }
                     }
                     else
                     {
 
                         other[item] =  this.records[i][item]
-                        console.log("other=>",other)
                     }
                 });
 
@@ -365,7 +360,6 @@ export default {
 
             }
 
-            console.log("data=>", data);
             return data;
         },
         recNames() {
