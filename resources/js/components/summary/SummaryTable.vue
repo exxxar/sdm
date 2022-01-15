@@ -310,7 +310,7 @@ export default {
             if (!this.records)
                 return [];
 
-            let data = [];
+            let data = this.records
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
                     if (a > b) {
@@ -331,7 +331,7 @@ export default {
                 tmp.forEach(item => {
                     if (item !== "date" && item !== "average" && item !== "total") {
                         if (this.records[i][item].device_type_id === 2) {
-                            console.log(item,"=>",this.records[i][item])
+
                             names_2[item] =  this.records[i][item]
                             console.log("names_2=>",names_2)
                         }
@@ -341,26 +341,27 @@ export default {
 
                         if (this.records[i][item].device_type_id === 3)
                         {
-                            console.log(item,"=>",this.records[i][item])
+
                             names_3[item] =  this.records[i][item]
                             console.log("names_3=>",names_2)
                         }
 
                         if (this.records[i][item].device_type_id === 5)
                         {
-                            console.log(item,"=>",this.records[i][item])
+
                             names_5[item] =  this.records[i][item]
                             console.log("names_5=>",names_2)
                         }
                     }
                     else
                     {
-                        console.log(item,"=>",this.records[i][item])
+
                         other[item] =  this.records[i][item]
                         console.log("other=>",other)
                     }
                 });
 
+                console.log("result=>",[...names_2, ...names_5, ...names_3, ...other])
                 data[i] =  [...names_2, ...names_5, ...names_3, ...other];
                 console.log("data=>", data[i]);
             }
