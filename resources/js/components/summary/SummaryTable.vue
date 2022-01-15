@@ -310,7 +310,7 @@ export default {
             if (!this.records)
                 return [];
 
-            let data = this.records
+            let data = [];
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
                     if (a > b) {
@@ -322,6 +322,8 @@ export default {
                     // a должно быть равным b
                     return 0;
                 });
+
+
 
                 let names_2 = [],
                     names_3 = [],
@@ -335,8 +337,6 @@ export default {
                             names_2[item] =  this.records[i][item]
                             console.log("names_2=>",names_2)
                         }
-
-
 
 
                         if (this.records[i][item].device_type_id === 3)
@@ -362,11 +362,11 @@ export default {
                 });
 
                 console.log("result=>",[...names_2, ...names_5, ...names_3, ...other])
-                data[i] =  [...names_2, ...names_5, ...names_3, ...other];
-                console.log("data=>", data[i]);
+                data.push([...names_2, ...names_5, ...names_3, ...other]);
+
             }
 
-
+            console.log("data=>", data);
             return data;
         },
         recNames() {
