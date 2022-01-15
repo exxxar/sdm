@@ -307,6 +307,9 @@ export default {
     },
     methods: {
         recData() {
+            if (!this.this.records)
+                return [];
+            
             let data = this.records
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
@@ -340,12 +343,12 @@ export default {
                         other.push(this.records[i][item])
                 });
                 console.log("data step[",i,"]=>", [...names_2, ...names_5, ...names_3, ...other]);
-                this.records[i] =  [...names_2, ...names_5, ...names_3, ...other];
+                data[i] =  [...names_2, ...names_5, ...names_3, ...other];
                 console.log("data=>", this.records[i]);
             }
 
 
-            return this.records;
+            return data;
         },
         recNames() {
             let tmp = Object.keys(this.records[0]).sort(function(a, b) {
