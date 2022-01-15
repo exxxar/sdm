@@ -2,7 +2,7 @@
 <template>
     <div>
         <p v-if="recNames().length > 0">
-            Найдено {{ recNames().length }} записей
+            Найдено {{ records.length }} записей
         </p>
         <p>
             Проездов в выбранных устройствах <strong>{{ sum_passages }}</strong>
@@ -13,7 +13,7 @@
         </p>
 
         <div class="summary-table mt-3" v-if="!updating">
-            <div class="table100 ver1" v-if="recData() || recData().length > 0">
+            <div class="table100 ver1" v-if="records || records.length > 0">
                 <div class="table100-firstcol shadow-table100-firstcol">
                     <table>
                         <thead>
@@ -307,9 +307,6 @@ export default {
     },
     methods: {
         recData() {
-            if (this.records)
-                return;
-
             let data = this.records
             for (let i = 0; i<this.records.length;i++) {
                 let tmp = Object.keys(this.records[i]).sort(function (a, b) {
@@ -343,8 +340,8 @@ export default {
                         other.push(item)
                 });
                 console.log("data step[",i,"]=>", [...names_2, ...names_5, ...names_3, ...other]);
-                data[i] = [...names_2, ...names_5, ...names_3, ...other];
-                console.log("data=>",data);
+                this.records[i] =  [...names_2, ...names_5, ...names_3, ...other];
+                console.log("data=>", this.records[i]);
             }
 
 
